@@ -12,5 +12,7 @@ package projectgeometri;
 public interface Benda2D {
     double hitungLuas();
     double hitungKeliling();
+    double hitungPanjang();
+    double hitungLebar();
     void tampilkanInfo();
 }

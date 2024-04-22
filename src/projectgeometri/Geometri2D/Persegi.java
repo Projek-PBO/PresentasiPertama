@@ -11,30 +11,79 @@ import projectgeometri.Benda2D;
  * @author ASUS
  */
 public class Persegi implements Benda2D{
+    public double sisiPersegi;
+    public double luasPersegi;
+    public double kelilingPersegi;
+    
+    /**
+     *
+     * @param sisiPersegi
+     */
+    public Persegi(double sisiPersegi) {
+        this.sisiPersegi = sisiPersegi;
+    }
+    
+    public Persegi(double luasPersegi, double kelilingPersegi) {
+        this.luasPersegi = luasPersegi;
+        this.kelilingPersegi = kelilingPersegi;
+    }
+
+    public Persegi(double sisiPersegi, double luasPersegi, double kelilingPersegi) {
+        this.sisiPersegi = sisiPersegi;
+        this.luasPersegi = luasPersegi;
+        this.kelilingPersegi = kelilingPersegi;
+    }
+
+    public double getSisi() {
+        return sisiPersegi;
+    }
+
+    public void setSisi(double sisi) {
+        this.sisiPersegi = sisiPersegi;
+    }
+
+    public double getLuas() {
+        return luasPersegi;
+    }
+
+    public void setLuas(double luas) {
+        this.luasPersegi = luasPersegi;
+    }
+
+    public double getKeliling() {
+        return kelilingPersegi;
+    }
+
+    public void setKeliling(double keliling) {
+        this.kelilingPersegi = kelilingPersegi;
+    }
 
     @Override
     public double hitungLuas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        luasPersegi = sisiPersegi*sisiPersegi;
+        return luasPersegi;
     }
 
     @Override
     public double hitungKeliling() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double hitungPanjang() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double hitungLebar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        kelilingPersegi = 4*sisiPersegi;
+        return kelilingPersegi;
     }
 
     @Override
     public void tampilkanInfo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Sisi dari persegi : " + sisiPersegi);
+        System.out.println("Keliling dari persegi : " + kelilingPersegi);
+        System.out.println("Luas dari persegi : " + luasPersegi);
     }
     
+    public double hitungSisiDariLuas(){
+        sisiPersegi = Math.sqrt(luasPersegi);
+        return sisiPersegi;
+    }
+    
+    public double hitungSisiDariKeliling(){
+        sisiPersegi = kelilingPersegi/4;
+        return sisiPersegi;
+    }
 }

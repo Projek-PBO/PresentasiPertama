@@ -4,11 +4,28 @@
  * and open the template in the editor.
  */
 package projectgeometri.Geometri2D;
+import projectgeometri.Benda2D;
+
 
 /**
  *
  * @author ASUS
  */
-public class Ellips {
+public class Ellips implements Benda2D{
+
+    @Override
+    public double hitungLuas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double hitungKeliling() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void tampilkanInfo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
