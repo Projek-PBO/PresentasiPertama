@@ -12,20 +12,32 @@ import projectgeometri.Benda2D;
  * @author ASUS
  */
 public class Segitiga implements Benda2D{
-    double alasSegitiga;
-    double tinggiSegitiga;
-    double sisiSampingSegitiga;
-    double luasSegitiga;
-    double kelilingSegitiga;
+    public double alasSegitiga;
+    public double tinggiSegitiga;
+    public double sisiSampingSegitiga;
+    public double luasSegitiga;
+    public double kelilingSegitiga;
+    
+    public Segitiga(){
+        this.alasSegitiga = 3.0;
+        this.tinggiSegitiga = 4.0;
+        this.sisiSampingSegitiga = this.hitungSisiSamping();
+        this.luasSegitiga = this.hitungLuas();
+        this.kelilingSegitiga = this.hitungKeliling();
+    }
     
     public Segitiga(double alasSegitiga, double tinggiSegitiga) {
         this.alasSegitiga = alasSegitiga;
         this.tinggiSegitiga = tinggiSegitiga;
+        this.sisiSampingSegitiga = this.hitungSisiSamping();
+        this.luasSegitiga = this.hitungLuas();
+        this.kelilingSegitiga = this.hitungKeliling();
     }
 
     public Segitiga(double alasSegitiga, double tinggiSegitiga, double luasSegitiga, double kelilingSegitiga) {
         this.alasSegitiga = alasSegitiga;
         this.tinggiSegitiga = tinggiSegitiga;
+        this.sisiSampingSegitiga = this.hitungSisiSamping();
         this.luasSegitiga = luasSegitiga;
         this.kelilingSegitiga = kelilingSegitiga;
     }
@@ -78,7 +90,6 @@ public class Segitiga implements Benda2D{
 
     @Override
     public double hitungKeliling() {
-        
         kelilingSegitiga = alasSegitiga + tinggiSegitiga + sisiSampingSegitiga;
         return kelilingSegitiga;
     }

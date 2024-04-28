@@ -12,21 +12,85 @@ import projectgeometri.Benda2D;
  * @author ASUS
  */
 public class JajarGenjang implements Benda2D{
+    public double alasJajarGenjang;
+    public double tinggiJajarGenjang;
+    public double sisiMiringJajarGenjang;
+    public double luasJajarGenjang;
+    public double kelilingJajarGenjang;
 
+    public JajarGenjang() {
+        this.alasJajarGenjang = 12.0;
+        this.tinggiJajarGenjang = 9.0;
+        this.sisiMiringJajarGenjang = 7.0;
+        this.luasJajarGenjang = this.hitungLuas();
+        this.kelilingJajarGenjang = this.hitungKeliling();
+    }
+    
+    public JajarGenjang(double alasJajarGenjang, double tinggiJajarGenjang, double sisiMiringJajarGenjang) {
+        this.alasJajarGenjang = alasJajarGenjang;
+        this.tinggiJajarGenjang = tinggiJajarGenjang;
+        this.sisiMiringJajarGenjang = sisiMiringJajarGenjang;
+        this.luasJajarGenjang = this.hitungLuas();
+        this.kelilingJajarGenjang = this.hitungKeliling();
+    }
+
+    public double getAlasJajarGenjang() {
+        return alasJajarGenjang;
+    }
+
+    public void setAlasJajarGenjang(double alasJajarGenjang) {
+        this.alasJajarGenjang = alasJajarGenjang;
+    }
+
+    public double getTinggiJajarGenjang() {
+        return tinggiJajarGenjang;
+    }
+
+    public void setTinggiJajarGenjang(double tinggiJajarGenjang) {
+        this.tinggiJajarGenjang = tinggiJajarGenjang;
+    }
+
+    public double getSisiMiringJajarGenjang() {
+        return sisiMiringJajarGenjang;
+    }
+
+    public void setSisiMiringJajarGenjang(double sisiMiringJajarGenjang) {
+        this.sisiMiringJajarGenjang = sisiMiringJajarGenjang;
+    }
+
+    public double getLuasJajarGenjang() {
+        return luasJajarGenjang;
+    }
+
+    public void setLuasJajarGenjang(double luasJajarGenjang) {
+        this.luasJajarGenjang = luasJajarGenjang;
+    }
+
+    public double getKelilingJajarGenjang() {
+        return kelilingJajarGenjang;
+    }
+
+    public void setKelilingJajarGenjang(double kelilingJajarGenjang) {
+        this.kelilingJajarGenjang = kelilingJajarGenjang;
+    }
+    
     @Override
     public double hitungLuas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        luasJajarGenjang = alasJajarGenjang * tinggiJajarGenjang;
+        return luasJajarGenjang;
     }
 
     @Override
     public double hitungKeliling() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        kelilingJajarGenjang = 2 * (alasJajarGenjang + sisiMiringJajarGenjang);
+        return kelilingJajarGenjang;
     }
-
-
     @Override
     public void tampilkanInfo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Alas jajar genjang = " + alasJajarGenjang);
+        System.out.println("Tinggi jajar genjang = " + tinggiJajarGenjang);
+        System.out.println("Sisi miring jajar genjang = " + sisiMiringJajarGenjang);
+        System.out.println("Keliling jajar genjang = " + kelilingJajarGenjang);
+        System.out.println("Luas jajar genjang = " + luasJajarGenjang);
     }
-    
 }

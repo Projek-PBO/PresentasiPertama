@@ -9,6 +9,6 @@ package projectgeometri.Geometri3D;
  *
  * @author ASUS
  */
-public class KerucutTerpancung {
+public class KerucutTerpancung extends Kerucut{
     
 }

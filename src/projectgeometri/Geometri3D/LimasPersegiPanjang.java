@@ -5,10 +5,34 @@
  */
 package projectgeometri.Geometri3D;
 
+import projectgeometri.Geometri2D.PersegiPanjang;
+
 /**
  *
  * @author ASUS
  */
-public class LimasPersegiPanjang {
+public class LimasPersegiPanjang extends PersegiPanjang{
+    double tinggiLimas;
+    double luasSisiMiring1;
+    double luasSisiMiring2;
+    double volumeLimas;
+    double luasPermukaanLimas;
+    
+    public double hitungVolumeLimas(){
+        volumeLimas = 1/3 * super.luasPersegiPanjang * tinggiLimas;
+        return volumeLimas;
+    }
+    public double hitungLuasPermukaanLimas(){
+        luasPermukaanLimas = super.luasPersegiPanjang + 2 * luasSisiMiring1 + luasSisiMiring2;
+        return luasPermukaanLimas;
+    }
+    public double hitungLuasSisiMiring1(){
+        luasSisiMiring1 = 1/2 * super.panjangPersegiPanjang * tinggiLimas;
+        return luasSisiMiring1;
+    }
+    public double hitungLuasSisiMiring2(){
+        luasSisiMiring2 = 1/2 * super.lebarPersegiPanjang * tinggiLimas;
+        return luasSisiMiring2;
+    }
     
 }

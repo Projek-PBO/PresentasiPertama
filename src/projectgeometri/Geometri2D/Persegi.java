@@ -14,24 +14,17 @@ public class Persegi implements Benda2D{
     public double sisiPersegi;
     public double luasPersegi;
     public double kelilingPersegi;
+
+    public Persegi(){
+        this.sisiPersegi = 10.0;
+        this.luasPersegi = this.hitungLuas();
+        this.kelilingPersegi = this.hitungKeliling();
+    }
     
-    /**
-     *
-     * @param sisiPersegi
-     */
     public Persegi(double sisiPersegi) {
         this.sisiPersegi = sisiPersegi;
-    }
-    
-    public Persegi(double luasPersegi, double kelilingPersegi) {
-        this.luasPersegi = luasPersegi;
-        this.kelilingPersegi = kelilingPersegi;
-    }
-
-    public Persegi(double sisiPersegi, double luasPersegi, double kelilingPersegi) {
-        this.sisiPersegi = sisiPersegi;
-        this.luasPersegi = luasPersegi;
-        this.kelilingPersegi = kelilingPersegi;
+        this.luasPersegi = this.hitungLuas();
+        this.kelilingPersegi = this.hitungKeliling();
     }
 
     public double getSisi() {
@@ -77,13 +70,13 @@ public class Persegi implements Benda2D{
         System.out.println("Luas dari persegi : " + luasPersegi);
     }
     
-    public double hitungSisiDariLuas(){
-        sisiPersegi = Math.sqrt(luasPersegi);
-        return sisiPersegi;
-    }
-    
-    public double hitungSisiDariKeliling(){
-        sisiPersegi = kelilingPersegi/4;
-        return sisiPersegi;
-    }
+//    public double hitungSisiDariLuas(){
+//        sisiPersegi = Math.sqrt(luasPersegi);
+//        return sisiPersegi;
+//    }
+//    
+//    public double hitungSisiDariKeliling(){
+//        sisiPersegi = kelilingPersegi/4;
+//        return sisiPersegi;
+//    }
 }

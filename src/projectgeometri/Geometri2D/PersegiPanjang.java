@@ -12,21 +12,23 @@ import projectgeometri.Benda2D;
  * @author ASUS
  */
 public class PersegiPanjang implements Benda2D{
-    double lebarPersegiPanjang;
-    double panjangPersegiPanjang;
-    double luasPersegiPanjang;
-    double kelilingPersegiPanjang;
+    public double lebarPersegiPanjang;
+    public double panjangPersegiPanjang;
+    public double luasPersegiPanjang;
+    public double kelilingPersegiPanjang;
+    
+    public PersegiPanjang() {
+        this.lebarPersegiPanjang = 5.0;
+        this.panjangPersegiPanjang = 10.0;
+        this.luasPersegiPanjang = this.hitungLuas();
+        this.kelilingPersegiPanjang = this.hitungKeliling();
+    }
     
     public PersegiPanjang(double lebarPersegiPanjang, double panjangPersegiPanjang) {
         this.lebarPersegiPanjang = lebarPersegiPanjang;
         this.panjangPersegiPanjang = panjangPersegiPanjang;
-    }
-
-    public PersegiPanjang(double lebarPersegiPanjang, double panjangPersegiPanjang, double luasPersegiPanjang, double kelilingPersegiPanjang) {
-        this.lebarPersegiPanjang = lebarPersegiPanjang;
-        this.panjangPersegiPanjang = panjangPersegiPanjang;
-        this.luasPersegiPanjang = luasPersegiPanjang;
-        this.kelilingPersegiPanjang = kelilingPersegiPanjang;
+        this.luasPersegiPanjang = this.hitungLuas();
+        this.kelilingPersegiPanjang = this.hitungKeliling();
     }
     
     public double getLebarPersegiPanjang() {
@@ -81,20 +83,20 @@ public class PersegiPanjang implements Benda2D{
         System.out.println("Luas persegi panjang : " + luasPersegiPanjang);
     }
     
-    double hitungLebarDariLuas(){
-        lebarPersegiPanjang = luasPersegiPanjang/panjangPersegiPanjang;
-        return lebarPersegiPanjang;
-    }
-    double hitungLebarDariKeliling(){
-        lebarPersegiPanjang = (kelilingPersegiPanjang/2)-panjangPersegiPanjang;
-        return lebarPersegiPanjang;
-    }
-    double hitungPanjangDariLuas(){
-        panjangPersegiPanjang = luasPersegiPanjang/lebarPersegiPanjang;
-        return panjangPersegiPanjang;
-    }
-    double hitungPanjangDariKeliling(){
-        panjangPersegiPanjang = (kelilingPersegiPanjang/2)-lebarPersegiPanjang;
-        return panjangPersegiPanjang;
-    }
+//    double hitungLebarDariLuas(){
+//        lebarPersegiPanjang = luasPersegiPanjang/panjangPersegiPanjang;
+//        return lebarPersegiPanjang;
+//    }
+//    double hitungLebarDariKeliling(){
+//        lebarPersegiPanjang = (kelilingPersegiPanjang/2)-panjangPersegiPanjang;
+//        return lebarPersegiPanjang;
+//    }
+//    double hitungPanjangDariLuas(){
+//        panjangPersegiPanjang = luasPersegiPanjang/lebarPersegiPanjang;
+//        return panjangPersegiPanjang;
+//    }
+//    double hitungPanjangDariKeliling(){
+//        panjangPersegiPanjang = (kelilingPersegiPanjang/2)-lebarPersegiPanjang;
+//        return panjangPersegiPanjang;
+//    }
 }

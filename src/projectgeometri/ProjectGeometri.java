@@ -5,6 +5,9 @@
  */
 package projectgeometri;
 
+import projectgeometri.Geometri2D.Ellips;
+import projectgeometri.Geometri2D.Persegi;
+
 /**
  *
  * @author ASUS
@@ -16,7 +19,8 @@ public class ProjectGeometri {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("TES");
+        Ellips ellips = new Ellips();
+        ellips.tampilkanInfo();
     }
     
 }
