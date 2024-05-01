@@ -20,47 +20,11 @@ public class PersegiPanjang implements Benda2D{
     public PersegiPanjang() {
         this.lebarPersegiPanjang = 5.0;
         this.panjangPersegiPanjang = 10.0;
-        this.luasPersegiPanjang = this.hitungLuas();
-        this.kelilingPersegiPanjang = this.hitungKeliling();
     }
     
     public PersegiPanjang(double lebarPersegiPanjang, double panjangPersegiPanjang) {
         this.lebarPersegiPanjang = lebarPersegiPanjang;
         this.panjangPersegiPanjang = panjangPersegiPanjang;
-        this.luasPersegiPanjang = this.hitungLuas();
-        this.kelilingPersegiPanjang = this.hitungKeliling();
-    }
-    
-    public double getLebarPersegiPanjang() {
-        return lebarPersegiPanjang;
-    }
-
-    public void setLebarPersegiPanjang(double lebarPersegiPanjang) {
-        this.lebarPersegiPanjang = lebarPersegiPanjang;
-    }
-
-    public double getPanjangPersegiPanjang() {
-        return panjangPersegiPanjang;
-    }
-
-    public void setPanjangPersegiPanjang(double panjangPersegiPanjang) {
-        this.panjangPersegiPanjang = panjangPersegiPanjang;
-    }
-
-    public double getLuasPersegiPanjang() {
-        return luasPersegiPanjang;
-    }
-
-    public void setLuasPersegiPanjang(double luasPersegiPanjang) {
-        this.luasPersegiPanjang = luasPersegiPanjang;
-    }
-
-    public double getKelilingPersegiPanjang() {
-        return kelilingPersegiPanjang;
-    }
-
-    public void setKelilingPersegiPanjang(double kelilingPersegiPanjang) {
-        this.kelilingPersegiPanjang = kelilingPersegiPanjang;
     }
 
     @Override

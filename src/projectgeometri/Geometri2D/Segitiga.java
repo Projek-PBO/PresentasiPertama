@@ -21,67 +21,16 @@ public class Segitiga implements Benda2D{
     public Segitiga(){
         this.alasSegitiga = 3.0;
         this.tinggiSegitiga = 4.0;
-        this.sisiSampingSegitiga = this.hitungSisiSamping();
-        this.luasSegitiga = this.hitungLuas();
-        this.kelilingSegitiga = this.hitungKeliling();
     }
     
     public Segitiga(double alasSegitiga, double tinggiSegitiga) {
         this.alasSegitiga = alasSegitiga;
         this.tinggiSegitiga = tinggiSegitiga;
-        this.sisiSampingSegitiga = this.hitungSisiSamping();
-        this.luasSegitiga = this.hitungLuas();
-        this.kelilingSegitiga = this.hitungKeliling();
     }
-
-    public Segitiga(double alasSegitiga, double tinggiSegitiga, double luasSegitiga, double kelilingSegitiga) {
-        this.alasSegitiga = alasSegitiga;
-        this.tinggiSegitiga = tinggiSegitiga;
-        this.sisiSampingSegitiga = this.hitungSisiSamping();
-        this.luasSegitiga = luasSegitiga;
-        this.kelilingSegitiga = kelilingSegitiga;
-    }
-
-    public double getAlasSegitiga() {
-        return alasSegitiga;
-    }
-
-    public void setAlasSegitiga(double alasSegitiga) {
-        this.alasSegitiga = alasSegitiga;
-    }
-
-    public double getTinggiSegitiga() {
-        return tinggiSegitiga;
-    }
-
-    public void setTinggiSegitiga(double tinggiSegitiga) {
-        this.tinggiSegitiga = tinggiSegitiga;
-    }
-
-    public double getSisiSampingSegitiga() {
+    public double hitungSisiSamping(){
+        sisiSampingSegitiga = Math.sqrt(Math.pow(alasSegitiga,2) + Math.pow(tinggiSegitiga,2));
         return sisiSampingSegitiga;
     }
-
-    public void setSisiSampingSegitiga(double sisiSampingSegitiga) {
-        this.sisiSampingSegitiga = sisiSampingSegitiga;
-    }
-
-    public double getLuasSegitiga() {
-        return luasSegitiga;
-    }
-
-    public void setLuasSegitiga(double luasSegitiga) {
-        this.luasSegitiga = luasSegitiga;
-    }
-
-    public double getKelilingSegitiga() {
-        return kelilingSegitiga;
-    }
-
-    public void setKelilingSegitiga(double kelilingSegitiga) {
-        this.kelilingSegitiga = kelilingSegitiga;
-    }
-
     @Override
     public double hitungLuas() {
         luasSegitiga = (alasSegitiga * tinggiSegitiga)/2;
@@ -90,7 +39,7 @@ public class Segitiga implements Benda2D{
 
     @Override
     public double hitungKeliling() {
-        kelilingSegitiga = alasSegitiga + tinggiSegitiga + sisiSampingSegitiga;
+        kelilingSegitiga = alasSegitiga + tinggiSegitiga + this.hitungSisiSamping();
         return kelilingSegitiga;
     }
 
@@ -101,10 +50,5 @@ public class Segitiga implements Benda2D{
         System.out.println("Sisi samping segitiga : " + sisiSampingSegitiga);
         System.out.println("Keliling segitiga : " + kelilingSegitiga);
         System.out.println("Luas segitiga : " + luasSegitiga);
-    }
-    
-    public double hitungSisiSamping(){
-        sisiSampingSegitiga = Math.sqrt(Math.pow(alasSegitiga,2) + Math.pow(tinggiSegitiga,2));
-        return sisiSampingSegitiga;
     }
 }

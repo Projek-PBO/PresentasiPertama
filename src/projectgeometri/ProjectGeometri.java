@@ -19,8 +19,8 @@ public class ProjectGeometri {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Ellips ellips = new Ellips();
-        ellips.tampilkanInfo();
+        MenuBuilder menu = new MenuBuilder();
+        menu.membuatMenuUtama();
     }
     
 }

@@ -15,24 +15,27 @@ public class PrismaPersegiPanjang extends PersegiPanjang {
     double tinggiPrisma;
     double volumePrisma;
     double luasPermukaanPrisma;
-    double luasSisiSamping1;
-    double luasSisiSamping2;
+
+    public PrismaPersegiPanjang() {
+        this.tinggiPrisma = 20.0;
+    }
+    
+    public PrismaPersegiPanjang(double tinggiPrisma) {
+        this.tinggiPrisma = tinggiPrisma;
+    }
+    
+    public PrismaPersegiPanjang(double lebarPersegiPanjang, double panjangPersegiPanjang, double tinggiPrisma) {
+        super(lebarPersegiPanjang, panjangPersegiPanjang);
+        this.tinggiPrisma = tinggiPrisma;
+    }
     
     public double hitungVolume(){
         volumePrisma = super.luasPersegiPanjang * tinggiPrisma;
         return volumePrisma;
     }
     public double hitungLuasPermukaanPrisma(){
-        luasPermukaanPrisma = 2 * (super.luasPersegiPanjang + luasSisiSamping1 + luasSisiSamping2);
+        luasPermukaanPrisma = 2 * super.luasPersegiPanjang + super.kelilingPersegiPanjang * tinggiPrisma;
         return luasPermukaanPrisma;
-    }
-    public double hitungLuasSisiSamping1(){
-        luasSisiSamping1 = super.panjangPersegiPanjang * tinggiPrisma;
-        return luasSisiSamping1;
-    }
-    public double hitungLuasSisiSamping2(){
-        luasSisiSamping2 = super.lebarPersegiPanjang * tinggiPrisma;
-        return luasSisiSamping2;
     }
     
 }

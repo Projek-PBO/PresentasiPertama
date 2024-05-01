@@ -11,69 +11,24 @@ import projectgeometri.Geometri2D.Lingkaran;
  * @author ASUS
  */
 public class Tabung extends Lingkaran{
-    double jariJariTabung;
     double tinggiTabung;
     double selimutTabung;
     double luasPermukaanTabung;
     double volumeTabung;
-    double luasAlasTabung;
-
-    public Tabung(double jariJariTabung, double tinggiTabung, double selimutTabung, double luasPermukaanTabung, double volumeTabung, double luasAlasTabung) {
-        this.jariJariTabung = jariJariTabung;
-        this.tinggiTabung = tinggiTabung;
-        this.selimutTabung = selimutTabung;
-        this.luasPermukaanTabung = luasPermukaanTabung;
-        this.volumeTabung = volumeTabung;
-        this.luasAlasTabung = luasAlasTabung;
+    
+    public Tabung(){
+        this.tinggiTabung = 25.0;
     }
-
-    public double getJariJariTabung() {
-        return jariJariTabung;
-    }
-
-    public void setJariJariTabung(double jariJariTabung) {
-        this.jariJariTabung = jariJariTabung;
-    }
-
-    public double getTinggiTabung() {
-        return tinggiTabung;
-    }
-
-    public void setTinggiTabung(double tinggiTabung) {
+    
+    public Tabung(double tinggiTabung) {
         this.tinggiTabung = tinggiTabung;
     }
 
-    public double getSelimutTabung() {
-        return selimutTabung;
-    }
-
-    public void setSelimutTabung(double selimutTabung) {
-        this.selimutTabung = selimutTabung;
-    }
-
-    public double getLuasPermukaanTabung() {
-        return luasPermukaanTabung;
-    }
-
-    public void setLuasPermukaanTabung(double luasPermukaanTabung) {
-        this.luasPermukaanTabung = luasPermukaanTabung;
-    }
-
-    public double getVolumeTabung() {
-        return volumeTabung;
-    }
-
-    public void setVolumeTabung(double volumeTabung) {
-        this.volumeTabung = volumeTabung;
-    }
-
-    public double getLuasAlasTabung() {
-        return luasAlasTabung;
-    }
-
-    public void setLuasAlasTabung(double luasAlasTabung) {
-        this.luasAlasTabung = luasAlasTabung;
-    }
+    public Tabung(double jariJariLingkaran, double tinggiTabung) {
+        super(jariJariLingkaran);
+        super.luasLingkaran = super.hitungLuas();
+        this.tinggiTabung = tinggiTabung;
+    } 
     
     public double hitungVolumeTabung(){
         volumeTabung = super.luasLingkaran * tinggiTabung;
@@ -81,7 +36,18 @@ public class Tabung extends Lingkaran{
     }
     
     public double hitungLuasPermukaanTabung(){
-        luasPermukaanTabung = selimutTabung + 2 * luasAlasTabung;
+        luasPermukaanTabung = selimutTabung + 2 * super.luasLingkaran;
         return luasPermukaanTabung;
+    }
+    public double hitungSelimutTabung(){
+        selimutTabung = 2*Math.PI*super.jariJariLingkaran*tinggiTabung;
+        return selimutTabung;
+    }
+    public void tampilkanInfo(){
+        System.out.println("Jari jari lingkaran tabung : " + super.jariJariLingkaran);
+        System.out.println("Tinggi tabung : " + this.tinggiTabung);
+        System.out.println("Luas selimut tabung : " + this.selimutTabung);
+        System.out.println("Volume tabung : " + this.volumeTabung);
+        System.out.println("Luas permukaan tabung : " + this.luasPermukaanTabung);
     }
 }

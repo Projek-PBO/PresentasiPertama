@@ -24,8 +24,6 @@ public class LayangLayang implements Benda2D{
         this.diagonal2LayangLayang = 40.0;
         this.sisiMiring1LayangLayang = 13.0;
         this.sisiMiring2LayangLayang = 37.0;
-        this.kelilingLayangLayang = this.hitungKeliling();
-        this.luasLayangLayang = this.hitungLuas();
     }
 
     public LayangLayang(double diagonal1LayangLayang, double diagonal2LayangLayang,double sisiMiring1,double sisiMiring2) {
@@ -33,58 +31,8 @@ public class LayangLayang implements Benda2D{
         this.diagonal2LayangLayang = diagonal2LayangLayang;
         this.sisiMiring1LayangLayang = sisiMiring1;
         this.sisiMiring2LayangLayang = sisiMiring2;
-        this.kelilingLayangLayang = this.hitungKeliling();
-        this.luasLayangLayang = this.hitungLuas();
     }
 
-    public double getDiagonal1LayangLayang() {
-        return diagonal1LayangLayang;
-    }
-
-    public void setDiagonal1LayangLayang(double diagonal1LayangLayang) {
-        this.diagonal1LayangLayang = diagonal1LayangLayang;
-    }
-
-    public double getDiagonal2LayangLayang() {
-        return diagonal2LayangLayang;
-    }
-
-    public void setDiagonal2LayangLayang(double diagonal2LayangLayang) {
-        this.diagonal2LayangLayang = diagonal2LayangLayang;
-    }
-
-    public double getSisi1LayangLayang() {
-        return sisiMiring1LayangLayang;
-    }
-
-    public void setSisi1LayangLayang(double sisi1LayangLayang) {
-        this.sisiMiring1LayangLayang = sisi1LayangLayang;
-    }
-
-    public double getSisi2LayangLayang() {
-        return sisiMiring2LayangLayang;
-    }
-
-    public void setSisi2LayangLayang(double sisi2LayangLayang) {
-        this.sisiMiring2LayangLayang = sisi2LayangLayang;
-    }
-
-    public double getLuasLayangLayang() {
-        return luasLayangLayang;
-    }
-
-    public void setLuasLayangLayang(double luasLayangLayang) {
-        this.luasLayangLayang = luasLayangLayang;
-    }
-
-    public double getKelilingLayangLayang() {
-        return kelilingLayangLayang;
-    }
-
-    public void setKelilingLayangLayang(double kelilingLayangLayang) {
-        this.kelilingLayangLayang = kelilingLayangLayang;
-    }
-    
     @Override
     public double hitungLuas() {
         luasLayangLayang = diagonal1LayangLayang * diagonal2LayangLayang / 2;

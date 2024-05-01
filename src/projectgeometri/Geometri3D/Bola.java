@@ -14,9 +14,14 @@ import projectgeometri.Geometri2D.Lingkaran;
 public class Bola extends Lingkaran{
     double volumeBola;
     double luasPermukaanBola;
+
+    public Bola(double jariJariLingkaran) {
+        super(jariJariLingkaran);
+        super.luasLingkaran = super.hitungLuas();
+    }
     
     public double hitungVolumeBola(){
-        volumeBola = 4/3 * super.luasLingkaran * super.jariJariLingkaran;
+        volumeBola = (4 * super.luasLingkaran * super.jariJariLingkaran)/3;
         return volumeBola;
     }
     
@@ -25,4 +30,9 @@ public class Bola extends Lingkaran{
         return luasPermukaanBola;
     }
     
+    public void tampilkanInfo(){
+        System.out.println("Jari jari bola : " + super.jariJariLingkaran);
+        System.out.println("Volume bola : " + this.volumeBola);
+        System.out.println("Luas permukaan bola : " + this.luasPermukaanBola);
+    }
 }

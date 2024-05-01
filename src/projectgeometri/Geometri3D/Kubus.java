@@ -11,58 +11,34 @@ import projectgeometri.Geometri2D.Persegi;
  * @author ASUS
  */
 public class Kubus extends Persegi{
-    double sisiKubus;
     double luasPermukaanKubus;
     double volumeKubus;
-
-    public Kubus(double sisiKubus) {
-        this.sisiKubus = sisiKubus;
+    
+    public Kubus(){
+        super();
+        super.luasPersegi = super.hitungLuas();
+        super.kelilingPersegi = super.hitungKeliling();
     }
     
-    public Kubus(double sisiKubus, double luasPermukaanKubus, double volumeKubus) {
-        this.sisiKubus = sisiKubus;
-        this.luasPermukaanKubus = luasPermukaanKubus;
-        this.volumeKubus = volumeKubus;
+    public Kubus(double sisiPersegi) {
+        super(sisiPersegi);
+        super.luasPersegi = super.hitungLuas();
+        super.kelilingPersegi = super.hitungKeliling();
     }
 
-    public double getSisiKubus() {
-        return sisiKubus;
-    }
-
-    public void setSisiKubus(double sisiKubus) {
-        this.sisiKubus = sisiKubus;
-    }
-
-    public double getLuasPermukaanKubus() {
-        return luasPermukaanKubus;
-    }
-
-    public void setLuasPermukaanKubus(double luasPermukaanKubus) {
-        this.luasPermukaanKubus = luasPermukaanKubus;
-    }
-
-    public double getVolumeKubus() {
-        return volumeKubus;
-    }
-
-    public void setVolumeKubus(double volumeKubus) {
-        this.volumeKubus = volumeKubus;
-    }
-    
     public double hitungVolumeKubus(){
         volumeKubus = super.luasPersegi * super.sisiPersegi;
         return volumeKubus;
     }
-    public double hitungVolumeKubus(double sisi){
-        volumeKubus = Math.pow(sisi,3);
-        return volumeKubus;
-    }
+    
     public double hitungLuasPermukaanKubus(){
         luasPermukaanKubus = 6 * super.luasPersegi;
         return luasPermukaanKubus;
     }
-    public double hitungLuasPermukaanKubus(double sisi){
-        luasPermukaanKubus = 6 * (sisi * sisi);
-        return luasPermukaanKubus;
+    
+    public void tampilkanInfo(){
+        System.out.println("Panjang rusuk kubus : " + super.sisiPersegi);
+        System.out.println("Volume kubus : " + this.volumeKubus);
+        System.out.println("Luas permukaan kubus : " + this.luasPermukaanKubus);
     }
 }

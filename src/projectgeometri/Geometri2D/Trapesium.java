@@ -23,66 +23,12 @@ public class Trapesium implements Benda2D{
         this.sisiAtasTrapesium = 6.0;
         this.sisiBawahTrapesium = 12.0;
         this.tinggiTrapesium = 4.0;
-        this.sisiMiringTrapesium = this.hitungSisiMiring();
-        this.kelilingTrapesium = this.hitungKeliling();
-        this.luasTrapesium = this.hitungLuas();
     }
 
     public Trapesium(double sisiAtasTrapesium, double sisiBawahTrapesium, double tinggiTrapesium) {
         this.sisiAtasTrapesium = sisiAtasTrapesium;
         this.sisiBawahTrapesium = sisiBawahTrapesium;
         this.tinggiTrapesium = tinggiTrapesium;
-        this.sisiMiringTrapesium = this.hitungSisiMiring();
-        this.kelilingTrapesium = this.hitungKeliling();
-        this.luasTrapesium = this.hitungLuas();
-    }
-
-    public double getSisiAtasTrapesium() {
-        return sisiAtasTrapesium;
-    }
-
-    public void setSisiAtasTrapesium(double sisiAtasTrapesium) {
-        this.sisiAtasTrapesium = sisiAtasTrapesium;
-    }
-
-    public double getSisiBawahTrapesium() {
-        return sisiBawahTrapesium;
-    }
-
-    public void setSisiBawahTrapesium(double sisiBawahTrapesium) {
-        this.sisiBawahTrapesium = sisiBawahTrapesium;
-    }
-
-    public double getTinggiTrapesium() {
-        return tinggiTrapesium;
-    }
-
-    public void setTinggiTrapesium(double tinggiTrapesium) {
-        this.tinggiTrapesium = tinggiTrapesium;
-    }
-
-    public double getSisiMiringTrapesium() {
-        return sisiMiringTrapesium;
-    }
-
-    public void setSisiMiringTrapesium(double sisiMiringTrapesium) {
-        this.sisiMiringTrapesium = sisiMiringTrapesium;
-    }
-
-    public double getLuasTrapesium() {
-        return luasTrapesium;
-    }
-
-    public void setLuasTrapesium(double luasTrapesium) {
-        this.luasTrapesium = luasTrapesium;
-    }
-
-    public double getKelilingTrapesium() {
-        return kelilingTrapesium;
-    }
-
-    public void setKelilingTrapesium(double kelilingTrapesium) {
-        this.kelilingTrapesium = kelilingTrapesium;
     }
 
     @Override
@@ -93,7 +39,7 @@ public class Trapesium implements Benda2D{
 
     @Override
     public double hitungKeliling() {
-        kelilingTrapesium = sisiAtasTrapesium + sisiBawahTrapesium + tinggiTrapesium + sisiMiringTrapesium;
+        kelilingTrapesium = sisiAtasTrapesium + sisiBawahTrapesium + tinggiTrapesium + this.hitungSisiMiring();
         return kelilingTrapesium;
     }
 

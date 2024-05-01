@@ -17,40 +17,11 @@ public class Lingkaran implements Benda2D{
     
     public Lingkaran(){
         this.jariJariLingkaran = 10.0;
-        this.luasLingkaran = this.hitungLuas();
-        this.kelilingLingkaran = this.hitungKeliling();
     }
 
     public Lingkaran(double jariJariLingkaran) {
         this.jariJariLingkaran = jariJariLingkaran;
-        this.luasLingkaran = this.hitungLuas();
-        this.kelilingLingkaran = this.hitungKeliling();
     }
-
-    public double getJariJariLingkaran() {
-        return jariJariLingkaran;
-    }
-
-    public void setJariJariLingkaran(double jariJariLingkaran) {
-        this.jariJariLingkaran = jariJariLingkaran;
-    }
-
-    public double getLuasLingkaran() {
-        return luasLingkaran;
-    }
-
-    public void setLuasLingkaran(double luasLingkaran) {
-        this.luasLingkaran = luasLingkaran;
-    }
-
-    public double getKelilingLingkaran() {
-        return kelilingLingkaran;
-    }
-
-    public void setKelilingLingkaran(double kelilingLingkaran) {
-        this.kelilingLingkaran = kelilingLingkaran;
-    }
-    
 
     @Override
     public double hitungLuas() {
@@ -68,7 +39,7 @@ public class Lingkaran implements Benda2D{
     public void tampilkanInfo() {
         System.out.println("Jari-jari Lingkaran : " + jariJariLingkaran);
         System.out.println("Luas Lingkaran : " + luasLingkaran);
-        System.out.println("Keliling Lingkaran" + kelilingLingkaran);
+        System.out.println("Keliling Lingkaran : " + kelilingLingkaran);
     }
     
 }

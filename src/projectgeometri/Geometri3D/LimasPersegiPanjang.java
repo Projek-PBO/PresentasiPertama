@@ -17,6 +17,19 @@ public class LimasPersegiPanjang extends PersegiPanjang{
     double luasSisiMiring2;
     double volumeLimas;
     double luasPermukaanLimas;
+
+    public LimasPersegiPanjang() {
+        this.tinggiLimas = 20.0;
+    }
+    
+    public LimasPersegiPanjang(double tinggiLimas) {
+        this.tinggiLimas = tinggiLimas;
+    }
+    
+    public LimasPersegiPanjang(double lebarPersegiPanjang, double panjangPersegiPanjang, double tinggiLimas) {
+        super(lebarPersegiPanjang, panjangPersegiPanjang);
+        this.tinggiLimas = tinggiLimas;
+    }
     
     public double hitungVolumeLimas(){
         volumeLimas = 1/3 * super.luasPersegiPanjang * tinggiLimas;

@@ -19,9 +19,13 @@ public class Kerucut extends Lingkaran {
 
     public Kerucut() {
         this.tinggiKerucut = 10.0;
-        this.volumeKerucut = this.hitungVolumeKerucut();
-        this.garisPelukisKerucut = this.hitungGarisPelukis();
-        this.luasPermukaanKerucut = this.hitungLuasPermukaanKerucut();
+    }
+    public Kerucut(double tinggiKerucut) {
+        this.tinggiKerucut = tinggiKerucut;
+    }
+    public Kerucut(double tinggiKerucut, double jariJariLingkaran) {
+        super(jariJariLingkaran);
+        this.tinggiKerucut = tinggiKerucut;
     }
     
     public double hitungVolumeKerucut(){

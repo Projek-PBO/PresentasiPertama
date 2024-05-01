@@ -16,6 +16,19 @@ public class LimasSegitiga extends Segitiga{
     double luasSisiMiring;
     double volumeLimas;
     double luasPermukaanLimas;
+
+    public LimasSegitiga() {
+        this.tinggiLimas = 20.0;
+    }
+    
+    public LimasSegitiga(double tinggiLimas) {
+        this.tinggiLimas = tinggiLimas;
+    }
+    
+    public LimasSegitiga(double alasSegitiga, double tinggiSegitiga, double tinggiLimas) {
+        super(alasSegitiga, tinggiSegitiga);
+        this.tinggiLimas = tinggiLimas;
+    }
     
     public double hitungVolumeLimas(){
         volumeLimas = 1/3 * super.luasSegitiga * tinggiLimas;
@@ -26,8 +39,7 @@ public class LimasSegitiga extends Segitiga{
         return luasPermukaanLimas;
     }
     public double hitungLuasSisiMiring(){
-        luasSisiMiring = 1/2 * super.alasSegitiga * tinggiLimas;
+        luasSisiMiring = (1/2 * super.alasSegitiga * tinggiLimas) + (1/2 * super.tinggiSegitiga * tinggiLimas) + (1/2 * super.sisiSampingSegitiga * tinggiLimas);
         return luasSisiMiring;
     }
-    
 }

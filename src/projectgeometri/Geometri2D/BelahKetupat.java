@@ -21,17 +21,11 @@ public class BelahKetupat implements Benda2D{
     public BelahKetupat(){
         this.diagonalBelahKetupat1 = 8.0;
         this.diagonalBelahKetupat2 = 6.0;
-        this.sisiMiring = this.hitungSisiMiring();
-        this.luasBelahKetupat = this.hitungLuas();
-        this.kelilingBelahKetupat = this.hitungKeliling();
     }
     
     public BelahKetupat(double diagonalBelahKetupat1, double diagonalBelahKetupat2){
         this.diagonalBelahKetupat1 = diagonalBelahKetupat1;
         this.diagonalBelahKetupat2 = diagonalBelahKetupat2;
-        this.sisiMiring = this.hitungSisiMiring();
-        this.luasBelahKetupat = this.hitungLuas();
-        this.kelilingBelahKetupat = this.hitungKeliling();
     }
     
     @Override
@@ -45,7 +39,7 @@ public class BelahKetupat implements Benda2D{
     
     @Override
     public double hitungKeliling() {
-        kelilingBelahKetupat = sisiMiring * 4;
+        kelilingBelahKetupat = this.hitungSisiMiring() * 4;
         return kelilingBelahKetupat;
     }
     

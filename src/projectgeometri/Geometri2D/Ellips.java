@@ -20,15 +20,11 @@ public class Ellips implements Benda2D{
     public Ellips() {
         this.sumbuMinor = 10.0;
         this.sumbuMayor = 18.0;
-        this.luasEllips = this.hitungLuas();
-        this.kelilingEllips = this.hitungKeliling();
     }
 
     public Ellips(double sumbuMinor, double sumbuMayor) {
         this.sumbuMinor = sumbuMinor;
         this.sumbuMayor = sumbuMayor;
-        this.luasEllips = this.hitungLuas();
-        this.kelilingEllips = this.hitungKeliling();
     }
 
     @Override
