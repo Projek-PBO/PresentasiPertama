@@ -35,4 +35,9 @@ public class Tembereng extends Bola{
         luasTembereng = (derajatTembereng / 360 * Math.PI * Math.pow(jariJariLingkaran, 2)) - (Math.sqrt(Math.pow(jariJariLingkaran, 2) - Math.pow(taliBusur / 2 , 2)) * taliBusur / 2);
         return luasTembereng;
     }
+
+    public double hitungKelilingTembereng(){
+        kelilingTembereng = taliBusur + (derajatTembereng / 360 * super.kelilingLingkaran);
+        return kelilingTembereng;
+    }
 }
