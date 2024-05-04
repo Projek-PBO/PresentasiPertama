@@ -37,7 +37,8 @@ import projectgeometri.Geometri3D.Tembereng;
 public class MenuBuilder {
     public void membuatMenuUtama(){
         int pilihan;
-        Scanner input = new Scanner(System.in);        
+        try {
+        Scanner input = new Scanner(System.in); 
         do {
             System.out.println("== MENU UTAMA ==");
             System.out.println("1. Hitung Luas dan Keliling Bangun Datar");
@@ -47,25 +48,29 @@ public class MenuBuilder {
             pilihan = input.nextInt();
             switch (pilihan) {
                 case 1:
-                    menuBangunDatar();
+                    membuatMenuBangunDatar();
                     break;
                 case 2:
-                    menuBangunRuang();
+                    membuatMenuBangunRuang();
                     break;
                 case 3:
                     System.out.println("Terima kasih!");
                     break;
                 default:
                     System.out.println("Pilihan tidak valid. Silakan coba lagi.");
-            }
-            
+            }  
             System.out.println();
         } while (pilihan != 3);
+        } catch (Exception e) {
+            System.out.println("Input yang dimasukkan bukan angka.");
+            this.membuatMenuUtama();
+        }
     }
     
-    public static void menuBangunDatar(){
+    public static void membuatMenuBangunDatar(){
         int pilihan;
         double param1, param2, param3, param4;
+        try {
         Scanner input = new Scanner(System.in);        
         do {
             System.out.println("== MENU BANGUN DATAR ==");
@@ -180,15 +185,18 @@ public class MenuBuilder {
                 default:
                 System.out.println("Pilihan tidak valid. Silakan coba lagi.");
             }
-            
             System.out.println();
         } while (pilihan != 10);
+        } catch (Exception e) {
+            System.out.println("Input yang dimasukkan bukan angka.");
+        }
     }
     
-    public static void menuBangunRuang() {
+    public static void membuatMenuBangunRuang() {
         int pilihan;
         double param1, param2, param3;
         Scanner input = new Scanner(System.in);
+        try{
         do {
             System.out.println("== MENU BANGUN RUANG ==");
             System.out.println("1. Kubus");
@@ -377,5 +385,8 @@ public class MenuBuilder {
             }
             System.out.println();
         } while (pilihan != 16);
+        } catch (Exception e) {
+            System.out.println("Input yang dimasukkan bukan angka.");
+        }
     }
 }

@@ -10,7 +10,6 @@ package projectgeometri.Geometri3D;
  * @author ASUS
  */
 public class Cincin extends Bola {
- 
     double tinggiCincin;
     double lebarCincin;
     double luasPermukaanCincin;
