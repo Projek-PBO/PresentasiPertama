@@ -12,9 +12,9 @@ import projectgeometri.Geometri2D.Persegi;
  * @author ASUS
  */
 public class PrismaPersegi extends Persegi{
-    double tinggiPrismaPersegi;
-    double luasPermukaanPrismaPersegi;
-    double volumePrismaPersegi;
+    public double tinggiPrismaPersegi;
+    public double luasPermukaanPrismaPersegi;
+    public double volumePrismaPersegi;
 
     public PrismaPersegi(double sisiPersegi, double tinggiPrismaPersegi) {
         super(sisiPersegi);

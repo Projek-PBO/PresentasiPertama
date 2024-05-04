@@ -42,20 +42,4 @@ public class PersegiPanjang implements Benda2D{
         System.out.println("Luas persegi panjang : " + luasPersegiPanjang);
     }
     
-//    double hitungLebarDariLuas(){
-//        lebarPersegiPanjang = luasPersegiPanjang/panjangPersegiPanjang;
-//        return lebarPersegiPanjang;
-//    }
-//    double hitungLebarDariKeliling(){
-//        lebarPersegiPanjang = (kelilingPersegiPanjang/2)-panjangPersegiPanjang;
-//        return lebarPersegiPanjang;
-//    }
-//    double hitungPanjangDariLuas(){
-//        panjangPersegiPanjang = luasPersegiPanjang/lebarPersegiPanjang;
-//        return panjangPersegiPanjang;
-//    }
-//    double hitungPanjangDariKeliling(){
-//        panjangPersegiPanjang = (kelilingPersegiPanjang/2)-lebarPersegiPanjang;
-//        return panjangPersegiPanjang;
-//    }
 }

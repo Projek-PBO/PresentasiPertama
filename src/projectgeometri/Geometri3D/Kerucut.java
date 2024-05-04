@@ -12,10 +12,10 @@ import projectgeometri.Geometri2D.Lingkaran;
  * @author ASUS
  */
 public class Kerucut extends Lingkaran {
-    double tinggiKerucut;
-    double volumeKerucut;
-    double luasPermukaanKerucut;
-    double garisPelukisKerucut;    
+    public double tinggiKerucut;
+    public double volumeKerucut;
+    public double luasPermukaanKerucut;
+    public double garisPelukisKerucut;    
 
     public Kerucut(double tinggiKerucut, double jariJariLingkaran) {
         super(jariJariLingkaran);

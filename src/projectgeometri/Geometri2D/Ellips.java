@@ -12,10 +12,10 @@ import projectgeometri.Benda2D;
  * @author ASUS
  */
 public class Ellips implements Benda2D{
-    double sumbuMinor;
-    double sumbuMayor;
-    double luasEllips;
-    double kelilingEllips;
+    public double sumbuMinor;
+    public double sumbuMayor;
+    public double luasEllips;
+    public double kelilingEllips;
 
     public Ellips(double sumbuMinor, double sumbuMayor) {
         this.sumbuMinor = sumbuMinor;
@@ -24,13 +24,13 @@ public class Ellips implements Benda2D{
 
     @Override
     public double hitungLuas() {
-        luasEllips = Math.PI * (sumbuMinor/2) * (sumbuMayor/2);
+        luasEllips = Math.PI * sumbuMinor * sumbuMayor;
         return luasEllips;
     }
 
     @Override
     public double hitungKeliling() {
-        kelilingEllips = 2 * Math.PI * Math.sqrt((Math.pow(sumbuMayor/2,2)+Math.pow(sumbuMinor/2, 2))/2);
+        kelilingEllips = 2 * Math.PI * Math.sqrt((Math.pow(sumbuMayor,2)+Math.pow(sumbuMinor,2))/2);
         return kelilingEllips;
     }
 

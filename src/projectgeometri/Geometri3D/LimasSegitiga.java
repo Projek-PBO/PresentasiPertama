@@ -12,10 +12,10 @@ import projectgeometri.Geometri2D.Segitiga;
  * @author ASUS
  */
 public class LimasSegitiga extends Segitiga{
-    double tinggiLimas;
-    double luasSisiMiring;
-    double volumeLimas;
-    double luasPermukaanLimas;
+    public double tinggiLimas;
+    public double luasSisiMiring;
+    public double volumeLimas;
+    public double luasPermukaanLimas;
     
     public LimasSegitiga(double alasSegitiga, double tinggiSegitiga, double tinggiLimas) {
         super(alasSegitiga, tinggiSegitiga);

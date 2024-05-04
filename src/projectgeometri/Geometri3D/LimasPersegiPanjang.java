@@ -12,11 +12,11 @@ import projectgeometri.Geometri2D.PersegiPanjang;
  * @author ASUS
  */
 public class LimasPersegiPanjang extends PersegiPanjang{
-    double tinggiLimas;
-    double luasSisiMiring1;
-    double luasSisiMiring2;
-    double volumeLimas;
-    double luasPermukaanLimas;
+    public double tinggiLimas;
+    public double luasSisiMiring1;
+    public double luasSisiMiring2;
+    public double volumeLimas;
+    public double luasPermukaanLimas;
     
     public LimasPersegiPanjang(double lebarPersegiPanjang, double panjangPersegiPanjang, double tinggiLimas) {
         super(lebarPersegiPanjang, panjangPersegiPanjang);

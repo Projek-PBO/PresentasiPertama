@@ -4,26 +4,22 @@
  * and open the template in the editor.
  */
 package projectgeometri.Geometri3D;
-
 /**
  *
  * @author ASUS
  */
 public class KerucutTerpancung extends Kerucut{
-    double tinggiPancung;
-    double volumeKerucutTerpancung;
-    double luasPermukaanKerucutTerpancung;
-    double garisPelukisKerucutTerpancung;
-    double jariJariPancung;
+    public double tinggiPancung;
+    public double volumeKerucutTerpancung;
+    public double luasPermukaanKerucutTerpancung;
+    public double garisPelukisKerucutTerpancung;
+    public double jariJariPancung;
 
     public KerucutTerpancung(double tinggiPancung, double tinggiKerucut, double jariJariLingkaran) {
         super(tinggiKerucut, jariJariLingkaran);
         this.tinggiPancung = tinggiPancung;
-        this.hitungJariJariPancung();
-        this.hitungGarisPelukisKerucutTerpancung();
         super.hitungVolumeKerucut();
         super.hitungLuasPermukaanKerucut();
-        
     }
 
     public double hitungJariJariPancung(){
@@ -32,18 +28,18 @@ public class KerucutTerpancung extends Kerucut{
     }
 
     public double hitungVolumeKerucutTerpancung(){
-        volumeKerucutTerpancung = super.volumeKerucut - (Math.PI*Math.pow(jariJariPancung,2) * tinggiPancung / 3);
+        Kerucut pancung = new Kerucut(tinggiPancung, hitungJariJariPancung());
+        pancung.hitungVolumeKerucut();
+        volumeKerucutTerpancung = super.volumeKerucut - pancung.volumeKerucut;
         return volumeKerucutTerpancung;
     }
 
     public double hitungLuasPermukaanKerucutTerpancung(){
-        luasPermukaanKerucutTerpancung = super.luasPermukaanKerucut - (Math.PI * jariJariPancung * (garisPelukisKerucutTerpancung + jariJariPancung) - (Math.PI*Math.pow(jariJariPancung, 2)));
+        Kerucut pancung = new Kerucut(tinggiPancung, hitungJariJariPancung());
+        pancung.hitungGarisPelukis();
+        pancung.hitungLuasPermukaanKerucut();
+        luasPermukaanKerucutTerpancung = super.luasPermukaanKerucut - pancung.luasPermukaanKerucut + pancung.luasLingkaran;
         return luasPermukaanKerucutTerpancung;
-    }
-
-    public double hitungGarisPelukisKerucutTerpancung(){
-        garisPelukisKerucutTerpancung = Math.sqrt(Math.pow(jariJariPancung,2) + Math.pow(tinggiPancung,2));
-        return garisPelukisKerucutTerpancung;
     }
     
     public void tampilkanInfo(){

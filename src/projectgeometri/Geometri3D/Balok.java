@@ -12,9 +12,9 @@ import projectgeometri.Geometri2D.PersegiPanjang;
  * @author ASUS
  */
 public class Balok extends PersegiPanjang{
-    double tinggiBalok;
-    double luasPermukaanBalok;
-    double volumeBalok;
+    public double tinggiBalok;
+    public double luasPermukaanBalok;
+    public double volumeBalok;
 
     public Balok(double lebarPersegiPanjang, double panjangPersegiPanjang, double tinggiBalok) {
         super(lebarPersegiPanjang, panjangPersegiPanjang);

@@ -12,9 +12,9 @@ import projectgeometri.Geometri2D.Segitiga;
  * @author ASUS
  */
 public class PrismaSegitiga extends Segitiga{
-    double tinggiPrisma;
-    double volumePrisma;
-    double luasPermukaanPrisma;
+    public double tinggiPrisma;
+    public double volumePrisma;
+    public double luasPermukaanPrisma;
 
     public PrismaSegitiga(double alasSegitiga, double tinggiSegitiga, double tinggiPrisma) {
         super(alasSegitiga, tinggiSegitiga);

@@ -11,10 +11,10 @@ import projectgeometri.Geometri2D.Lingkaran;
  * @author ASUS
  */
 public class Tabung extends Lingkaran{
-    double tinggiTabung;
-    double selimutTabung;
-    double luasPermukaanTabung;
-    double volumeTabung;
+    public double tinggiTabung;
+    public double selimutTabung;
+    public double luasPermukaanTabung;
+    public double volumeTabung;
 
     public Tabung(double jariJariLingkaran, double tinggiTabung) {
         super(jariJariLingkaran);

@@ -11,8 +11,8 @@ import projectgeometri.Geometri2D.Persegi;
  * @author ASUS
  */
 public class Kubus extends Persegi{
-    double luasPermukaanKubus;
-    double volumeKubus;
+    public double luasPermukaanKubus;
+    public double volumeKubus;
     
     public Kubus(double sisiPersegi) {
         super(sisiPersegi);

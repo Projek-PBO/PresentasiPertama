@@ -319,7 +319,7 @@ public class MenuBuilder {
                     param1 = input.nextDouble();
                     System.out.print("Masukkan Tinggi Limas Persegi : ");
                     param2 = input.nextDouble();
-                    LimasPersegi limaspersegi = new LimasPersegi(param1, param2);
+                    LimasPersegi limaspersegi = new LimasPersegi(param2, param1);
                     limaspersegi.hitungVolumeLimas();
                     limaspersegi.hitungLuasPermukaan();
                     limaspersegi.tampilkanInfo();
@@ -331,7 +331,7 @@ public class MenuBuilder {
                     param2 = input.nextDouble();
                     System.out.print("Masukkan Tinggi Limas Persegi Panjang : ");
                     param3 = input.nextDouble();
-                    LimasPersegiPanjang limaspersegipanjang = new LimasPersegiPanjang(param1, param2, param3);
+                    LimasPersegiPanjang limaspersegipanjang = new LimasPersegiPanjang(param2, param1, param3);
                     limaspersegipanjang.hitungVolumeLimas();
                     limaspersegipanjang.hitungLuasPermukaanLimas();
                     limaspersegipanjang.tampilkanInfo();

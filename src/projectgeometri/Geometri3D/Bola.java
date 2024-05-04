@@ -12,8 +12,8 @@ import projectgeometri.Geometri2D.Lingkaran;
  * @author ASUS
  */
 public class Bola extends Lingkaran{
-    double volumeBola;
-    double luasPermukaanBola;
+    public double volumeBola;
+    public double luasPermukaanBola;
 
     public Bola(double jariJariLingkaran) {
         super(jariJariLingkaran);

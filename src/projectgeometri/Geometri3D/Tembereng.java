@@ -10,11 +10,10 @@ package projectgeometri.Geometri3D;
  * @author ASUS
  */
 public class Tembereng extends Bola{
-
-    double luasTembereng;
-    double taliBusur;
-    double kelilingTembereng;
-    double derajatTembereng;
+    public double luasTembereng;
+    public double taliBusur;
+    public double kelilingTembereng;
+    public double derajatTembereng;
 
     public Tembereng(double jariJariLingkaran, double derajatTembereng){
         super(jariJariLingkaran);

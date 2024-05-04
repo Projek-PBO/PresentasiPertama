@@ -10,10 +10,10 @@ package projectgeometri.Geometri3D;
  * @author ASUS
  */
 public class Cincin extends Bola {
-    double tinggiCincin;
-    double lebarCincin;
-    double luasPermukaanCincin;
-    double volumeCincin;
+    public double tinggiCincin;
+    public double lebarCincin;
+    public double luasPermukaanCincin;
+    public double volumeCincin;
 
     public Cincin(double tinggiCincin, double lebarCincin, double jariJariLingkaran){
         super(jariJariLingkaran);
@@ -36,5 +36,4 @@ public class Cincin extends Bola {
         System.out.println("Volume Cincin :" + this.volumeCincin);
         System.out.println("Luas Permukaan Cincin : " + this.luasPermukaanCincin);
     }
-
 }

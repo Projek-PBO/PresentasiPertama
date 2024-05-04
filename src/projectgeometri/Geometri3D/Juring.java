@@ -10,10 +10,9 @@ package projectgeometri.Geometri3D;
  * @author ASUS
  */
 public class Juring extends Bola{
-
-    double derajatJuring;
-    double luasJuring;
-    double kelilingJuring;
+    public double derajatJuring;
+    public double luasJuring;
+    public double kelilingJuring;
 
     public Juring(double derajatJuring, double jariJariLingkaran){
         super(jariJariLingkaran);
