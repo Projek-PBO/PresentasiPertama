@@ -37,8 +37,7 @@ public class KerucutTerpancung extends Kerucut{
     public double hitungLuasPermukaanKerucutTerpancung(){
         Kerucut pancung = new Kerucut(tinggiPancung, hitungJariJariPancung());
         pancung.hitungGarisPelukis();
-        pancung.hitungLuasPermukaanKerucut();
-        luasPermukaanKerucutTerpancung = super.luasPermukaanKerucut - pancung.luasPermukaanKerucut + pancung.luasLingkaran;
+        luasPermukaanKerucutTerpancung = super.luasPermukaanKerucut - (Math.PI * pancung.jariJariLingkaran * pancung.garisPelukisKerucut) + pancung.luasLingkaran;
         return luasPermukaanKerucutTerpancung;
     }
     
